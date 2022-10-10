@@ -1,0 +1,22 @@
+Alphabet:
+a. upper and lower case letters (Aa-Zz)
+b. decimal digits
+
+Lexic:
+
+a. special symbols:
+	- operators: + - * / < > <= >= \= =
+	- separators: { } ( )
+	- reserved words: list, of, if, else, not, and, or, while, read, write, struct
+b. identifiers:
+	- letter ::= "A" | "a" | "B" | ... | "Z" | "z"
+	- digit ::= "0" | "1" | ... "9"
+	- nZeroDigit ::= "1" | "2" | ... | "9"
+	- identifier ::= letter | letter{letter}{digit} | letter{digit}{letter}
+
+1. integer:
+	- number ::= digit | nZeroDigit{number}
+2. character:
+	- character ::= 'letter' | 'digit'
+3. string:
+	- string ::= character{character} | character{string}

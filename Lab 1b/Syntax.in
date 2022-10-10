@@ -1,0 +1,15 @@
+program ::= "VAR" decllist ";" cmpdstmt "."
+decllist ::= declaration | declaration ";" decllist
+declaration ::= identifier "=" type
+simpletype ::= "number" | "character" | "string"
+arraydecl ::= "list"[" nr "]" "of" simpletype
+type ::= simpletype | arraydecl
+cmpdstmt ::= "{" stmtlist "}"
+stmtlist ::= stmt | stmt ";" stmtlist
+stmt ::= ifstmt | iostmt | whilestmt
+ifstmt ::= "if" condition "{" stmt "}"
+iostmt ::= "read" | "write" "(" identifier ")"
+whilestmt ::= "while" condition "{" stmt "}"
+condition ::= identifier realtion identifier
+relation ::= "<" | ">" | "=" | "\=" | "<=" | ">="
+struct ::= decllist
