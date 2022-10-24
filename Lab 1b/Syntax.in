@@ -3,7 +3,7 @@ decllist ::= declaration | declaration ";" decllist
 declaration ::= identifier "=" type
 simpletype ::= "number" | "character" | "string"
 arraydecl ::= "list"[" nr "]" "of" simpletype
-type ::= simpletype | arraydecl
+type ::= simpletype | arraydecl | struct
 cmpdstmt ::= "{" stmtlist "}"
 stmtlist ::= stmt | stmt ";" stmtlist
 stmt ::= ifstmt | iostmt | whilestmt
