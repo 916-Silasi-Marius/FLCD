@@ -20,3 +20,5 @@ b. identifiers:
 	- character ::= 'letter' | 'digit'
 3. string:
 	- string ::= character{character} | character{string}
+4. boolean
+	- boolean ::= TRUE | FALSE

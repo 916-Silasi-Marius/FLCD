@@ -11,5 +11,5 @@ ifstmt ::= "if" condition "{" stmt "}"
 iostmt ::= "read" | "write" "(" identifier ")"
 whilestmt ::= "while" condition "{" stmt "}"
 condition ::= identifier realtion identifier
-relation ::= "<" | ">" | "=" | "\=" | "<=" | ">="
+relation ::= "<" | ">" | "==" | "\=" | "<=" | ">=" | "%"
 struct ::= decllist

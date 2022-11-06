@@ -1,0 +1,21 @@
+    The implementation of the Binary Search Tree is inside the BST.java class. It uses an auxiliary class called Node that
+contains the value of each node in the tree with the left and the right nodes.
+
+    The add functionality inside the BST is a recursive method that treats each current node as the root of a smaller
+tree. At each iteration we are moving downwards inside the tree while forgetting every node on upper levels. When we
+reach our destination (the level of the tree where the new node needs to be inserted) we create a new Node object that
+gets the corresponding value and the right and left nodes are assigned if the new node is not a leaf node.
+
+    The search functionality is very simple. It starts from the root node and at every node it compares the value of it
+with the value that we are searching for and if there is a match the search stops. If there is not a match, and we still
+have nodes to search through, we decide if we go on the left or the right child, depending on the value that we are
+searching for. If we reached the end of the tree without finding our value that means that the value is not present in
+the tree.
+
+    The delete functionality start by searching the position of the node that we are trying to delete. Once we find that
+node there are multiple case:
+    1. If the node has no children we just return null to its parent
+    2. If the node has exactly one child we return that child to the parent (we link the parent of the deleted node with
+        the child of the deleted node)
+    3. If the node has 2 children we replace the "deleted" node with the smallest right child, so we keep the tree sorted.
+    After replacing that node we delete the smallest node from the right child from its initial position.

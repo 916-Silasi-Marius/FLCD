@@ -1,0 +1,29 @@
+VAS
+a = NUMBER ;
+b = NUMBER ;
+c = NUMBER ;
+READ ( a ) ;
+READ ( b ) ;
+READ ( c ) ;
+IF a > b
+{
+	IF a ~ c
+	{
+		WRITE ( a ) ;
+	}
+	ELSE
+	{
+		WRITE ( c ) ;
+	}
+}
+ELSE
+{
+	IF b > c
+	{
+		WRITE ( b ) ;
+	}
+	ELSE
+	{
+		WRITE ( c ) ;
+	}
+}
