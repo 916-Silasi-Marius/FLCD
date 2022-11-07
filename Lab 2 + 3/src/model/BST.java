@@ -15,7 +15,7 @@ public class BST {
 
         if (value.compareTo(current.value) < 0) {
             current.left = addRecursive(current.left, value);
-        } else {
+        } else if (value.compareTo(current.value) > 0) {
             current.right = addRecursive(current.right, value);
         }
 

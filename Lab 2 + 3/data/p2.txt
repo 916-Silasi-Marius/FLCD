@@ -1,13 +1,13 @@
 VAR
-x = NUMBER ;
-y = NUMBER ;
-READ ( x ) ;
-READ ( y ) ;
-WHILE Y \= 0
+x1 = NUMBER ;
+x2 = NUMBER ;
+READ ( x1 ) ;
+READ ( x2 ) ;
+WHILE x2 \= 0
 {
-	r = NUMBER ;
-	r = x ;
-	x = y ;
-	y = r % y ;
+	r1 = NUMBER ;
+	r1 = x1 ;
+	x1 = x2 ;
+	x2 = r1 % x2 ;
 }
-WRITE ( x ) ;
+WRITE ( x1 ) ;

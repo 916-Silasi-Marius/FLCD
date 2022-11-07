@@ -1,13 +1,13 @@
 VAR
-n = NUMBER ;
-s = NUMBER ;
-s = 0 ;
-READ ( n ) ;
-WHILE n > 0
+n1 = NUMBER ;
+s1 = NUMBER ;
+s1 = 0 ;
+READ ( n1 ) ;
+WHILE n1 > 0
 {
-	i = NUMBER ;
-	READ ( i ) ;
-	s = s + i ;	
-	n = n - 1 ;
+	i1 = NUMBER ;
+	READ ( i1 ) ;
+	s1 = s1 + i1 ;
+	n1 = n1 - 1 ;
 }
-WRITE ( s ) ;
+WRITE ( s1 ) ;

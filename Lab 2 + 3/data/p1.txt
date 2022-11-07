@@ -1,29 +1,26 @@
 VAR
-a = NUMBER ;
-b = NUMBER ;
-c = NUMBER ;
-READ ( a ) ;
-READ ( b ) ;
-READ ( c ) ;
-IF a > b
+b1 = 321 ;
+a1 = 567 ;
+c1 = 123 ;
+IF a1 > b1
 {
-	IF a > c
+	IF a1 > c1
 	{
-		WRITE ( a ) ;
+		WRITE ( a1 ) ;
 	}
 	ELSE
 	{
-		WRITE ( c ) ;
+		WRITE ( c1 ) ;
 	}
 }
 ELSE
 {
-	IF b > c
+	IF b1 > c1
 	{
-		WRITE ( b ) ;
+		WRITE ( b1 ) ;
 	}
 	ELSE
 	{
-		WRITE ( c ) ;
+		WRITE ( c1 ) ;
 	}
 }

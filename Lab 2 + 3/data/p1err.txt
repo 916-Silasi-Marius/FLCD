@@ -1,5 +1,5 @@
 VAS
-a = NUMBER ;
+a23 = NUMBER ;
 b = NUMBER ;
 c = NUMBER ;
 READ ( a ) ;

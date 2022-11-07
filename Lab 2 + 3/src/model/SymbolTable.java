@@ -8,6 +8,14 @@ public class SymbolTable {
         this.constants = constants;
         this.identifiers = identifiers;
     }
+    
+    public void addConstant(String value) {
+        this.constants.add(value);
+    }
+
+    public void addIdentifier(String value) {
+        this.identifiers.add(value);
+    }
 
     public void add(String value) {
         if (value.length() > 1) {
@@ -32,5 +40,13 @@ public class SymbolTable {
 
     public boolean findToken(String value) {
         return constants.containsNode(value) || identifiers.containsNode(value);
+    }
+
+    public BST getConstants() {
+        return this.constants;
+    }
+
+    public BST getIdentifiers() {
+        return this.identifiers;
     }
 }
