@@ -1,0 +1,10 @@
+The DFA first reads the input from FA.in file where we can find:
+    - list of states
+    - the alphabet
+    - initial state
+    - list of final states
+    - list of state rules
+
+    The application has a menu that provides you the possibility to view all the elements above. The menu also contains
+an option where you can provide a set of characters that will soon be evaluated, deciding rather the sequence is correct
+or not.

@@ -1,0 +1,20 @@
+The class CustomScanner contains:
+    -> SymbolTable
+    -> List of tokens from tokens.in
+    -> A regex for identifiers
+    -> A regex for constants
+    -> An inorder traversal for identifiers
+    -> An inorder traversal for constants
+
+Functions:
+    -> loadTokens()
+        -> reads the file tokens.in and adds every single token inside the class List.
+    -> scan()
+        -> reads the provided file with the code of a problem and analyzes the format of it. If there is any character
+        or group of characters that do not match the requirements of the language there will be an error.
+        -> otherwise, every constant/identifier that is found will be saved in the SymbolTable
+    -> createPIF()
+        -> reads the provided file with the code of a problem and categorizes every character/group of characters found.
+        -> it creates a file called PIF.txt where we will have information about the position of every element from the
+        file inside the SymbolTable
+

@@ -34,7 +34,7 @@ public class CustomScanner {
     }
 
     public String scan() throws FileNotFoundException {
-        File file = new File("data/p1err.txt");
+        File file = new File("data/p1.txt");
         Scanner scanner = new Scanner(file);
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
@@ -68,14 +68,31 @@ public class CustomScanner {
     public void createPIF() throws IOException {
         inOrder(symbolTable.getConstants().root, "constants");
         inOrder(symbolTable.getIdentifiers().root, "identifiers");
-
+//
         FileWriter myWriter = new FileWriter("data/PIF.txt");
-        for (String constant : inOrderConstants) {
-            myWriter.write("constant: " + constant + "; position: " + inOrderConstants.indexOf(constant) + '\n');
+        File file = new File("data/p1.txt");
+        Scanner scanner = new Scanner(file);
+        while (scanner.hasNextLine()) {
+            String line = scanner.nextLine();
+            line = line.replace("\n", "");
+            line = line.replace("\t", "");
+            for (String s : line.split(" ")) {
+                if (tokens.contains(s)) {
+                    myWriter.write(s + " -> -1\n");
+                } else {
+                    Matcher matcher = identifierPattern.matcher(s);
+                    if (matcher.matches()) {
+                        myWriter.write(s + " -> " + inOrderIdentifiers.indexOf(s) + '\n');
+                    }
+                    matcher = constantPattern.matcher(s);
+                    if (matcher.matches()) {
+                        myWriter.write(s + " -> " + inOrderConstants.indexOf(s) + '\n');
+                    }
+                }
+            }
+
         }
-        for (String identifier : inOrderIdentifiers) {
-            myWriter.write("identifier: " + identifier + "; position: " + inOrderIdentifiers.indexOf(identifier) + '\n');
-        }
+
         myWriter.close();
     }
 
